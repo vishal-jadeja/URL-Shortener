@@ -1,0 +1,6 @@
+CREATE SEQUENCE id_range_seq START 1 INCREMENT BY 1;
+
+CREATE TABLE id_ranges (
+  range_start BIGINT PRIMARY KEY,
+  claimed_at  TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);

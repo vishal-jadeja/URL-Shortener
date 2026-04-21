@@ -1,0 +1,33 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "Scalable URL shortener backend with Kafka analytics",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "worker": "node src/worker.js",
+    "dev": "nodemon src/server.js",
+    "dev:worker": "nodemon src/worker.js",
+    "migrate": "node src/migrations/run.js"
+  },
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.13.0",
+    "@fastify/cookie": "^9.3.1",
+    "@fastify/jwt": "^8.0.1",
+    "ajv-formats": "^3.0.1",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.27.0",
+    "fastify-plugin": "^4.5.1",
+    "ioredis": "^5.3.2",
+    "kafkajs": "^2.2.4",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.1",
+    "pino-pretty": "^11.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
